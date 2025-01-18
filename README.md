@@ -7,3 +7,6 @@
 ### Demo:
 [![asciicast](https://asciinema.org/a/ccOnRv4qghQg9qNZoAsupCrDn.svg)](https://asciinema.org/a/ccOnRv4qghQg9qNZoAsupCrDn)
 
+### Brain-calc Demo:
+[![asciicast](https://asciinema.org/a/9mjgT32nMH9YiI0dt9iQpTCgc.svg)](https://asciinema.org/a/9mjgT32nMH9YiI0dt9iQpTCgc)
+
