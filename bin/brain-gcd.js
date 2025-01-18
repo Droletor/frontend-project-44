@@ -4,12 +4,12 @@ import { randomRange, gcd } from '../src/utilities.js';
 import Game from '../src/index.js';
 
 const questionGenerator = () => {
-  const num_1 = randomRange(1, 51);
-  const num_2 = randomRange(1, 51);
-  
-  const question = `${num_1} ${num_2}`;
-  const realAnswer = gcd(num_1, num_2);
-  
+  const num1 = randomRange(1, 51);
+  const num2 = randomRange(1, 51);
+
+  const question = `${num1} ${num2}`;
+  const realAnswer = gcd(num1, num2);
+
   return [question, realAnswer.toString()];
 };
 

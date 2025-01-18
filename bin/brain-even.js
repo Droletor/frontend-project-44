@@ -6,7 +6,7 @@ import Game from '../src/index.js';
 const questionGenerator = () => {
   const number = randomRange(0, 100);
   const realAnswer = number % 2 === 0 ? 'yes' : 'no';
-  
+
   return [number, realAnswer];
 };
 
