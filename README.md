@@ -4,6 +4,39 @@
 ### Codebase summary:
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e8b134c921dadbb9359/maintainability)](https://codeclimate.com/github/Droletor/frontend-project-44/maintainability)
 
+### Info
+This project contains 5 math based games.
+
+### Installation
+
+1. Clone the repository.
+```shell
+git clone https://github.com/Droletor/frontend-project-44.git
+```
+
+2. Install the dependencies.
+```shell
+make install
+```
+
+### Running the games
+
+Using ``npm link``:
+
+```shell
+npm link
+```
+
+```shell
+brain-games
+```
+
+Using make:
+
+```shell
+make brain-games
+```
+
 ### Demo:
 [![asciicast](https://asciinema.org/a/ccOnRv4qghQg9qNZoAsupCrDn.svg)](https://asciinema.org/a/ccOnRv4qghQg9qNZoAsupCrDn)
 

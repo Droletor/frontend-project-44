@@ -1,0 +1,11 @@
+extends:
+  - "airbnb-base"
+env:
+  node: true
+plugins:
+  - "eslint-plugin-import"
+parserOptions:
+  ecmaVersion: latest
+rules:
+  no-console: 0
+  import/extensions: 0
