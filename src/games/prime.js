@@ -1,18 +1,17 @@
-import { randomRange, firstTwentyFivePrimeNumber } from '../utilities.js';
+import randomRange from '../utilities.js';
 import runGame from '../index.js';
+
+const isPrime = (num) => {
+  for (let i = 2; i < Math.sqrt(num); i += 1) {
+    if (num % i === 0) return false;
+  }
+  return num > 1;
+};
 
 const questionGenerator = () => {
   const [min, max] = [1, 98];
-  let num;
-  let realAnswer;
-  if (Math.random() < 0.5) {
-    realAnswer = 'no';
-    num = randomRange(min, max);
-    while (firstTwentyFivePrimeNumber.includes(num)) num += 1;
-  } else {
-    realAnswer = 'yes';
-    num = firstTwentyFivePrimeNumber[randomRange(0, firstTwentyFivePrimeNumber.length)];
-  }
+  const num = randomRange(min, max);
+  const realAnswer = isPrime(num) ? 'yes' : 'no';
 
   const question = `${num}`;
 

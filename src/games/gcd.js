@@ -1,5 +1,13 @@
-import { randomRange, gcd } from '../utilities.js';
+import randomRange from '../utilities.js';
 import runGame from '../index.js';
+
+const gcd = (a, b) => {
+  if (!b) {
+    return a;
+  }
+
+  return gcd(b, a % b);
+};
 
 const questionGenerator = () => {
   const [min, max] = [1, 51];

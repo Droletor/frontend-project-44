@@ -1,11 +1,7 @@
-import { randomRange, randomOperator } from '../utilities.js';
+import randomRange from '../utilities.js';
 import runGame from '../index.js';
 
-const OperationsDict = {
-  '+': (a, b) => a + b,
-  '-': (a, b) => a - b,
-  '*': (a, b) => a * b,
-};
+const randomOperator = () => ['+', '-', '*'][randomRange(0, 3)];
 
 const questionGenerator = () => {
   const [min, max] = [0, 26];
@@ -14,7 +10,21 @@ const questionGenerator = () => {
   const operator = randomOperator();
 
   const question = `${num1} ${operator} ${num2}`;
-  const realAnswer = OperationsDict[operator](num1, num2);
+  let realAnswer;
+
+  switch (operator) {
+    case '+':
+      realAnswer = num1 + num2;
+      break;
+    case '-':
+      realAnswer = num1 - num2;
+      break;
+    case '*':
+      realAnswer = num1 * num2;
+      break;
+    default:
+      throw new Error(`Operator: '${operator}' not implemented!`);
+  }
 
   return [question, realAnswer.toString()];
 };

@@ -1,4 +1,4 @@
-import { randomRange } from '../utilities.js';
+import randomRange from '../utilities.js';
 import runGame from '../index.js';
 
 const questionGenerator = () => {

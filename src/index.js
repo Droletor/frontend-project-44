@@ -16,7 +16,7 @@ const runGame = (gameText, questionGenerator, questionsCount = 3) => {
     if (answer !== solution) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${solution}'.`);
       console.log(`Let's try again, ${name}!`);
-      return false;
+      return;
     }
 
     // Win
@@ -24,7 +24,6 @@ const runGame = (gameText, questionGenerator, questionsCount = 3) => {
   }
 
   console.log(`Congratulations, ${name}!`);
-  return true;
 };
 
 export default runGame;
