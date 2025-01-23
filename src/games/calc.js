@@ -1,35 +1,39 @@
-import randomRange from '../utilities.js';
+import getRandomRange from '../utilities.js';
 import runGame from '../index.js';
 
-const randomOperator = () => ['+', '-', '*'][randomRange(0, 3)];
-
-const questionGenerator = () => {
-  const [min, max] = [0, 26];
-  const num1 = randomRange(min, max);
-  const num2 = randomRange(min, max);
-  const operator = randomOperator();
-
-  const question = `${num1} ${operator} ${num2}`;
-  let realAnswer;
-
+const randomOperator = () => ['+', '-', '*'][getRandomRange(0, 3)];
+const calculateWithOperator = (operator, num1, num2) => {
+  let result;
   switch (operator) {
     case '+':
-      realAnswer = num1 + num2;
+      result = num1 + num2;
       break;
     case '-':
-      realAnswer = num1 - num2;
+      result = num1 - num2;
       break;
     case '*':
-      realAnswer = num1 * num2;
+      result = num1 * num2;
       break;
     default:
       throw new Error(`Operator: '${operator}' not implemented!`);
   }
+
+  return result;
+};
+
+const generateQuestion = () => {
+  const [min, max] = [0, 26];
+  const num1 = getRandomRange(min, max);
+  const num2 = getRandomRange(min, max);
+  const operator = randomOperator();
+
+  const question = `${num1} ${operator} ${num2}`;
+  const realAnswer = calculateWithOperator(operator, num1, num2);
 
   return [question, realAnswer.toString()];
 };
 
 export default () => {
   const description = 'What is the result of the expression?';
-  runGame(description, questionGenerator);
+  runGame(description, generateQuestion);
 };

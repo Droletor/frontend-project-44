@@ -1,3 +1,3 @@
-const randomRange = (min, max) => Math.floor(Math.random() * (max - min) + min);
+const getRandomRange = (min = 0, max = 101) => Math.floor(Math.random() * (max - min) + min);
 
-export default randomRange;
+export default getRandomRange;
