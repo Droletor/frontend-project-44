@@ -8,8 +8,11 @@ const getProgression = (start = 0, length = 10, increment = 1) => {
 };
 
 const generateQuestion = () => {
-  const [startVal, length, inc] = [getRandomRange(0, 21), getRandomRange(8, 13), getRandomRange(1, 11)];
-  const progression = getProgression(startVal, length, inc);
+  const startVal = getRandomRange(0, 21);
+  const length = getRandomRange(8, 13);
+  const increment = getRandomRange(1, 11);
+
+  const progression = getProgression(startVal, length, increment);
   const randomIndex = getRandomRange(0, length);
 
   const realAnswer = progression[randomIndex];

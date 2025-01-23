@@ -1,7 +1,7 @@
 import getRandomRange from '../utilities.js';
 import runGame from '../index.js';
 
-const isEven = (num) => num % 2 === 0 ? 'yes' : 'no';
+const isEven = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
 const generateQuestion = () => {
   const [min, max] = [0, 101];
