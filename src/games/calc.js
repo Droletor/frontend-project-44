@@ -3,22 +3,16 @@ import runGame from '../index.js';
 
 const randomOperator = () => ['+', '-', '*'][getRandomRange(0, 3)];
 const calculateWithOperator = (operator, num1, num2) => {
-  let result;
   switch (operator) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     default:
       throw new Error(`Operator: '${operator}' not implemented!`);
   }
-
-  return result;
 };
 
 const generateQuestion = () => {
